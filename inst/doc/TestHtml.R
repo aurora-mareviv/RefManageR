@@ -1,6 +1,6 @@
 ## ----setup, include = TRUE, cache = FALSE--------------------------------
 library(RefManageR)
-bib <- ReadBib(system.file("Bib", "biblatexExamples.bib", 
+bib <- ReadBib(system.file("Bib", "biblatexExamples.bib",
                            package = "RefManageR"), check = FALSE)
 bib2 <- ReadBib(system.file("Bib", "RJC.bib", package = "RefManageR"))[[seq_len(20)]]
 BibOptions(check.entries = FALSE, style = "html")

@@ -1,3 +1,20 @@
+Changes in Version 0.8.3 (2013-07-30)
+---------------------------------------------------------
+
+NEW FEATURES
+
+* `as.BibEntry` will create entry key if given a `bibentry` object with no key.  Useful when citing
+packages with `citation`.
+* PrintBibliography and Cite functions (Cite, Citet, etc.) accept `bibentry` objects in addition to
+`BibEntry` objects.
+* `$<-.BibEntry` will now accept a single person object, so that a single author in a multi-author entry
+may be updated.  An example may be found at `help("$<-.BibEntry")`.  (h/t Carl Boettiger)
+
+BUG FIXES
+
+* validated html
+* changed example for `WriteBib` that occasionally failed check
+
 Changes in Version 0.8.2 (2013-06-01)
 ---------------------------------------------------------
 

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <style type="text/css">
 .knitr.inline {
   background-color: #f7f7f7;
@@ -65,7 +66,6 @@
 </style>
 <title>RefManageR R HTML</title>
 <link rel="stylesheet" type="text/css" href="../../CRAN_web.css"/>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 </head>
 <body>
 <h1>Add Citations to an R HTML Document and Print Bibliography</h1>
@@ -84,14 +84,14 @@ This is an R HTML document. This is an example of a citation in the text <code c
 <p>
 These are reports <code class="knitr inline"><a id='cite-chiu'></a><a id='cite-padhye'></a>Chiu and Chow<sup><a href='#bib-chiu'>[1]</a></sup>; Padhye, Firoiu, and Towsley<sup><a href='#bib-padhye'>[2]</a></sup></code>.  Their hyperlinks go to their entry in the bibliography.
 The link for <code class="knitr inline"><a id='cite-markey'></a><a href='http://tug.ctan.org/tex-archive/info/bibtex/tamethebeast/ttb_en.pdf'>Markey (2005)</a></code> will take you to the document in a new window; this is the default, if a link is available (see <code>?open.BibEnty</code>). The following citation has no hyperlink <code class="knitr inline">(de
-Geer, 1985)</code>.  You can also embed plots, for example: 
-</p>  
+Geer, 1985)</code>.  You can also embed plots, for example:
+</p>
 <div class="chunk" id="unnamed-chunk-1"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl kwd">plot</span><span class="hl std">(cars)</span>
 </pre></div>
 </div><div class="rimage default"><img src="figure/unnamed-chunk-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" class="plot" /></div></div>
 
 <p>
-I've added a reference to CTAN without citing it.  Now I'm adding a reference from another bibliography (a second <code>BibEntry</code> object) <code class="knitr inline"><a id='cite-serban2013multilevel'></a>(<a href='#bib-serban2013multilevel'>Serban, Staicu, and Carroll, 2013</a>)</code>.  Look at all my Aristotle: <code class="knitr inline"><a id='cite-aristotleanima'></a><a id='cite-aristotlephysics'></a><a id='cite-aristotlepoetics'></a><a id='cite-aristotlerhetoric'></a>Aristotle<sup><a href='#bib-aristotleanima'>[1]</a></sup>; Aristotle<sup><a href='#bib-aristotlephysics'>[2]</a></sup>; Aristotle<sup><a href='#bib-aristotlepoetics'>[3]</a></sup>; Aristotle<sup><a href='#bib-aristotlerhetoric'>[4]</a></sup></code>.  
+I've added a reference to CTAN without citing it.  Now I'm adding a reference from another bibliography (a second <code>BibEntry</code> object) <code class="knitr inline"><a id='cite-serban2013multilevel'></a>(<a href='#bib-serban2013multilevel'>Serban, Staicu, and Carroll, 2013</a>)</code>.  Look at all my Aristotle: <code class="knitr inline"><a id='cite-aristotleanima'></a><a id='cite-aristotlephysics'></a><a id='cite-aristotlepoetics'></a><a id='cite-aristotlerhetoric'></a>Aristotle<sup><a href='#bib-aristotleanima'>[1]</a></sup>; Aristotle<sup><a href='#bib-aristotlephysics'>[2]</a></sup>; Aristotle<sup><a href='#bib-aristotlepoetics'>[3]</a></sup>; Aristotle<sup><a href='#bib-aristotlerhetoric'>[4]</a></sup></code>.
 </p>
 <div class="chunk" id="unnamed-chunk-2"><div class="rcode"><div class="source"><pre class="knitr r"><span class="hl kwd">plot</span><span class="hl std">(cars)</span>
 </pre></div>
@@ -102,26 +102,26 @@ Some papers on the arXiv are <code class="knitr inline"><a id='cite-baezarticle'
 </p>
 <h2>References</h2>
 
-<p><a id='bib-aristotleanima'></a><a href="#cite-aristotleanima"><B>aristotle:anima</B><cite></a>
+<p><a id='bib-aristotleanima'></a><a href="#cite-aristotleanima"><B>aristotle:anima</B></a><cite>
 Aristotle.
 <EM>De Anima</EM>.
 Ed. by R. D. Hicks.
 Cambridge: Cambridge University Press, 1907.</cite></p>
 
-<p><a id='bib-aristotlephysics'></a><a href="#cite-aristotlephysics"><B>aristotle:physics</B><cite></a>
+<p><a id='bib-aristotlephysics'></a><a href="#cite-aristotlephysics"><B>aristotle:physics</B></a><cite>
 Aristotle.
 <EM>Physics</EM>.
 Trans.  by P. H. Wicksteed and F. M. Cornford.
 New York: G. P. Putnam, 1929.</cite></p>
 
-<p><a id='bib-aristotlepoetics'></a><a href="#cite-aristotlepoetics"><B>aristotle:poetics</B><cite></a>
+<p><a id='bib-aristotlepoetics'></a><a href="#cite-aristotlepoetics"><B>aristotle:poetics</B></a><cite>
 Aristotle.
 <EM>Poetics</EM>.
 Ed. by D. W. Lucas.
 Clarendon Aristotle.
 Oxford: Clarendon Press, 1968.</cite></p>
 
-<p><a id='bib-aristotlerhetoric'></a><a href="#cite-aristotlerhetoric"><B>aristotle:rhetoric</B><cite></a>
+<p><a id='bib-aristotlerhetoric'></a><a href="#cite-aristotlerhetoric"><B>aristotle:rhetoric</B></a><cite>
 Aristotle.
 <EM>The Rhetoric of Aristotle with a commentary by the late Edward
 Meredith Cope</EM>.
@@ -131,27 +131,27 @@ Vol. 3.
 3 vols.
 Cambridge University Press, 1877.</cite></p>
 
-<p><a id='bib-baezarticle'></a><a href="#cite-baezarticle"><B>baez/article</B><cite></a>
+<p><a id='bib-baezarticle'></a><a href="#cite-baezarticle"><B>baez/article</B></a><cite>
 J. C. Baez and A. D. Lauda.
 &ldquo;Higher-Dimensional Algebra V: 2-Groups&rdquo;.
 Version 3.
 In: <EM>Theory and Applications of Categories</EM> 12 (2004), pp. 423-491.
 arXiv: <a href="http://arxiv.org/abs/math/0307200v3">math/0307200v3</a>.</cite></p>
 
-<p><a id='bib-baezonline'></a><a href="#cite-baezonline"><B>baez/online</B><cite></a>
+<p><a id='bib-baezonline'></a><a href="#cite-baezonline"><B>baez/online</B></a><cite>
 J. C. Baez and A. D. Lauda.
 <EM>Higher-Dimensional Algebra V: 2-Groups</EM>.
 Oct. 27, 2004.
 arXiv: <a href="http://arxiv.org/abs/math/0307200v3">math/0307200v3</a>.</cite></p>
 
-<p><a id='bib-chiu'></a><a href="#cite-chiu"><B>chiu</B><cite></a>
+<p><a id='bib-chiu'></a><a href="#cite-chiu"><B>chiu</B></a><cite>
 W. W. Chiu and W. M. Chow.
 <EM>A Hybrid Hierarchical Model of a Multiple Virtual Storage
 (MVS) Operating System</EM>.
 Research rep. RC-6947.
 IBM, 1978.</cite></p>
 
-<p><a id='bib-ctan'></a><a href="#cite-ctan"><B>ctan</B><cite></a>
+<p><a id='bib-ctan'></a><a href="#cite-ctan"><B>ctan</B></a><cite>
 <EM>CTAN. The Comprehensive TeX Archive Network</EM>.
 2006.
 URL: <a href="http://www.ctan.org">http://www.ctan.org</a> (visited on 10/01/2006).</cite></p>
@@ -164,32 +164,32 @@ Study&rdquo;.
 PhD thesis.
 Uppsala: Uppsala Universitet, 1985.</cite></p>
 
-<p><a id='bib-itzhaki'></a><a href="#cite-itzhaki"><B>itzhaki</B><cite></a>
+<p><a id='bib-itzhaki'></a><a href="#cite-itzhaki"><B>itzhaki</B></a><cite>
 N. Itzhaki.
 <EM>Some remarks on 't Hooft's S-matrix for black holes</EM>.
 Mar. 11, 1996.
 arXiv: <a href="http://arxiv.org/abs/hep-th/9603067">hep-th/9603067</a>.</cite></p>
 
-<p><a id='bib-loh'></a><a href="#cite-loh"><B>loh</B><cite></a>
+<p><a id='bib-loh'></a><a href="#cite-loh"><B>loh</B></a><cite>
 N. C. Loh.
 &ldquo;High-Resolution Micromachined Interferometric Accelerometer&rdquo;.
 MA Thesis.
 Cambridge, Mass.: Massachusetts Institute of Technology, 1992.</cite></p>
 
-<p><a id='bib-markey'></a><a href="#cite-markey"><B>markey</B><cite></a>
+<p><a id='bib-markey'></a><a href="#cite-markey"><B>markey</B></a><cite>
 N. Markey.
 <EM>Tame the BeaST. The B to X of BibTeX</EM>.
 Oct. 16, 2005.
 URL: <a href="http://tug.ctan.org/tex-archive/info/bibtex/tamethebeast/ttb_en.pdf">http://tug.ctan.org/tex-archive/info/bibtex/tamethebeast/ttb_en.pdf</a> (visited on 10/01/2006).</cite></p>
 
-<p><a id='bib-padhye'></a><a href="#cite-padhye"><B>padhye</B><cite></a>
+<p><a id='bib-padhye'></a><a href="#cite-padhye"><B>padhye</B></a><cite>
 J. Padhye, V. Firoiu and D. Towsley.
 <EM>A Stochastic Model of TCP Reno Congestion Avoidance and
 Control</EM>.
 Tech. rep. 99-02.
 Amherst, Mass.: University of Massachusetts, 1999.</cite></p>
 
-<p><a id='bib-wassenberg'></a><a href="#cite-wassenberg"><B>wassenberg</B><cite></a>
+<p><a id='bib-wassenberg'></a><a href="#cite-wassenberg"><B>wassenberg</B></a><cite>
 J. Wassenberg and P. Sanders.
 <EM>Faster Radix Sort via Virtual Memory and Write-Combining</EM>.
 Aug. 17, 2010.
@@ -199,7 +199,7 @@ arXiv: <a href="http://arxiv.org/abs/1008.2849v1">1008.2849v1 [cs.DS]</a>.</cite
 
 <h2>More References</h2>
 
-<p><a id='bib-serban2013multilevel'></a><a href="#cite-serban2013multilevel">[1]<cite></a>
+<p><a id='bib-serban2013multilevel'></a><a href="#cite-serban2013multilevel">[1]</a><cite>
 N. Serban, A. M. Staicu and R. J. Carroll.
 &ldquo;Multilevel Cross-Dependent Binary Longitudinal Data&rdquo;.
 In: <EM>Biometrics</EM> 69.4 (2013), pp. 903&ndash;913.</cite></p>

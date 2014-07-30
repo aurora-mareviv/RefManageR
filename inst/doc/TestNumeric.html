@@ -2,8 +2,7 @@
 <!-- saved from url=(0014)about:internet -->
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta http-equiv="x-ua-compatible" content="IE=9" >
+<meta charset="UTF-8">
 
 <title>Add Citations to an RMarkdown Document and Print Bibliography</title>
 
@@ -19,35 +18,35 @@ tt, code, pre {
    font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
 }
 
-h1 { 
-   font-size:2.2em; 
+h1 {
+   font-size:2.2em;
 }
 
-h2 { 
-   font-size:1.8em; 
+h2 {
+   font-size:1.8em;
 }
 
-h3 { 
-   font-size:1.4em; 
+h3 {
+   font-size:1.4em;
 }
 
-h4 { 
-   font-size:1.0em; 
+h4 {
+   font-size:1.0em;
 }
 
-h5 { 
-   font-size:0.9em; 
+h5 {
+   font-size:0.9em;
 }
 
-h6 { 
-   font-size:0.8em; 
+h6 {
+   font-size:0.8em;
 }
 
 a:visited {
    color: rgb(50%, 0%, 50%);
 }
 
-pre {	
+pre {
    margin-top: 0;
    max-width: 95%;
    border: 1px solid #ccc;
@@ -82,54 +81,54 @@ hr {
 }
 
 @media print {
-   * { 
-      background: transparent !important; 
-      color: black !important; 
-      filter:none !important; 
-      -ms-filter: none !important; 
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
    }
 
-   body { 
-      font-size:12pt; 
-      max-width:100%; 
-   }
-       
-   a, a:visited { 
-      text-decoration: underline; 
+   body {
+      font-size:12pt;
+      max-width:100%;
    }
 
-   hr { 
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
       visibility: hidden;
       page-break-before: always;
    }
 
-   pre, blockquote { 
-      padding-right: 1em; 
-      page-break-inside: avoid; 
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
    }
 
-   tr, img { 
-      page-break-inside: avoid; 
+   tr, img {
+      page-break-inside: avoid;
    }
 
-   img { 
-      max-width: 100% !important; 
+   img {
+      max-width: 100% !important;
    }
 
-   @page :left { 
-      margin: 15mm 20mm 15mm 10mm; 
-   }
-     
-   @page :right { 
-      margin: 15mm 10mm 15mm 20mm; 
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
    }
 
-   p, h2, h3 { 
-      orphans: 3; widows: 3; 
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
    }
 
-   h2, h3 { 
-      page-break-after: avoid; 
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
    }
 }
 
@@ -182,65 +181,65 @@ hljs.initHighlightingOnLoad();
 <h1>Add Citations to an RMarkdown Document and Print Bibliography</h1>
 
 <pre><code class="r">library(RefManageR)
-bib &lt;- ReadBib(system.file(&quot;Bib&quot;, &quot;biblatexExamples.bib&quot;, package = &quot;RefManageR&quot;), 
+bib &lt;- ReadBib(system.file(&quot;Bib&quot;, &quot;biblatexExamples.bib&quot;, package = &quot;RefManageR&quot;),
     check = FALSE)
-BibOptions(check.entries = FALSE, style = &quot;markdown&quot;, bib.style = &quot;numeric&quot;, 
+BibOptions(check.entries = FALSE, style = &quot;markdown&quot;, bib.style = &quot;numeric&quot;,
     cite.style = &quot;numeric&quot;)
 </code></pre>
 
-<p>This is an R Markdown document. This is an example of a citation in the text <a name=cite-herrmann></a><a href="#bib-herrmann">Herrmann, Öfele, Schneider, et al. [1]</a>. Now we cite in parentheses <a name=cite-baezonline></a>[e.g., <a href="http://arxiv.org/abs/math/0307200v3">2</a>].  You can change the default options in a setup chunk at the start of the document or at any other point using the <code>BibOptions</code> function or by specifying options as a list in the <code>.opts</code> argument to the cite functions.</p>
+<p>This is an R Markdown document. This is an example of a citation in the text <a id=cite-herrmann></a><a href="#bib-herrmann">Herrmann, Öfele, Schneider, et al. [1]</a>. Now we cite in parentheses <a id=cite-baezonline></a>[e.g., <a href="http://arxiv.org/abs/math/0307200v3">2</a>].  You can change the default options in a setup chunk at the start of the document or at any other point using the <code>BibOptions</code> function or by specifying options as a list in the <code>.opts</code> argument to the cite functions.</p>
 
-<p>See what happens when <a name=cite-kantkpv></a><a name=cite-kantku></a>[<a href="#bib-kantkpv">KpV</a>; <a href="#bib-kantku">KU</a>] use the shorthand field?</p>
+<p>See what happens when <a id=cite-kantkpv></a><a id=cite-kantku></a>[<a href="#bib-kantkpv">KpV</a>; <a href="#bib-kantku">KU</a>] use the shorthand field?</p>
 
-<p>These are reports <a name=cite-chiu></a><a name=cite-padhye></a>Chiu and Chow<sup><a href="#bib-chiu">[3]</a>;</sup> Padhye, Firoiu, and Towsley<sup><a href="#bib-padhye">[4]</a>.</sup>  Their hyperlinks go to their entry in the bibliography.
-The link for <a name=cite-markey></a>[<a href="http://tug.ctan.org/tex-archive/info/bibtex/tamethebeast/ttb_en.pdf">5</a>] will take you to the document in a new window; this is the default behaviour, if a link is available (see <code>?open.BibEntry</code>). The following citation has no hyperlink [6].  You can also embed plots, for example: </p>
+<p>These are reports <a id=cite-chiu></a><a id=cite-padhye></a>Chiu and Chow<sup><a href="#bib-chiu">[3]</a>;</sup> Padhye, Firoiu, and Towsley<sup><a href="#bib-padhye">[4]</a>.</sup>  Their hyperlinks go to their entry in the bibliography.
+The link for <a id=cite-markey></a>[<a href="http://tug.ctan.org/tex-archive/info/bibtex/tamethebeast/ttb_en.pdf">5</a>] will take you to the document in a new window; this is the default behaviour, if a link is available (see <code>?open.BibEntry</code>). The following citation has no hyperlink [6].  You can also embed plots, for example: </p>
 
 <pre><code class="r">plot(cars)
 </code></pre>
 
 <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfgAAAGwCAMAAABy/YdMAAAAbFBMVEX9/v0AAAAAADkAAGUAOTkAOWUAOY8AZrU5AAA5ADk5AGU5OY85j9plAABlADllAGVlOQBlZjlltf2POQCPOTmPOWWPjzmPtY+P2/21ZgC1/rW1/v3ajzna24/a/v39tWX924/9/rX9/tr9/v0hhXJqAAAAJHRSTlP//////////////////////////////////////////////wBYLA0NAAAACXBIWXMAAAsSAAALEgHS3X78AAAJjElEQVR4nO3di3LbuBlA4bW7jd2snLTyXqSNGl38/u9YkVbqRKIVUsRPAjjnm061bSYIN8ckCF2gX16E9MvcB6B5GB7K8FCGhzI8lOGhDA9leCjDQxkeyvBQhocyPJThoQwPZXgow0MZHsrwUIaHMjyU4aEMD2V4KMNDGR7K8FCGhzI8lOGhDA9leCjDQxkeyvBQhocyPJThoQwPZXgow0MZHsrwUIaHMjyU4aEMD2V4KMNDGR7K8FCGhzI8lOGhDA9leCjDQxkeakz4O+UsMPyI36too8PvHtufn398GTq0ZjU2/OF52T5uP3wdOLRmNTb8/vOXHx77D61ZecZDjZ7j90/O8SXyrh7K8FAplnP3K2/uMvPTJ2iS3NwdnheGz8rdy0//+tMs59YP34Xv+aSg4kwQ/rSc2/z60TM+HxOEPy7nFs3D5nI9Z/j5xM/xtw+tWRkeyvBQhocavZx7Oq3dvLkry+gzvnn25qahNavxl/r9p9VNQ2tWzvFQhocyPJThoQwPZXgow0MZHsrwUIaHMjyU4aEMD2V4KMNDGR7K8FCGhzI8lOGhDA9leCjDQxkeyvBQhocyPJThody2HMpNjKHcthzKMx7KbcuhvKuHMjyUyzkob+6gApZzblteAs94KJdzUN7VQxkeyvBQhody23Ioty2HcttyKOd4KMNDGR7K8FCGr5JfMco0xZcK3zy04vR4O4Tha+QZD+UZD+UZT+Vdvd5heCjDQxkeyvBQhocyPJThoQwPZXgow0MZHsrwEOcv2xie4eKFWsNPZOatYQw/kx5vjZj2zzf8NOYO7xw/k9nDnzP8RHLb/s3wUG5pCuUGh1B+QwWUZzyUW5pel9vNeDLe1V+V3fI7mYDwNW1bbvh3HZdzD5tqL/WGf8/h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" alt="plot of chunk unnamed-chunk-1"/> </p>
 
-<p>I&#39;ve added a reference to CTAN without citing it.  Look at all my Aristotle: <a name=cite-aristotleanima></a><a name=cite-aristotlephysics></a><a name=cite-aristotlepoetics></a><a name=cite-aristotlerhetoric></a>[<a href="#bib-aristotleanima">8</a>; <a href="#bib-aristotlephysics">9</a>; <a href="#bib-aristotlepoetics">10</a>; <a href="#bib-aristotlerhetoric">11</a>].  </p>
+<p>I&#39;ve added a reference to CTAN without citing it.  Look at all my Aristotle: <a id=cite-aristotleanima></a><a id=cite-aristotlephysics></a><a id=cite-aristotlepoetics></a><a id=cite-aristotlerhetoric></a>[<a href="#bib-aristotleanima">8</a>; <a href="#bib-aristotlephysics">9</a>; <a href="#bib-aristotlepoetics">10</a>; <a href="#bib-aristotlerhetoric">11</a>].  </p>
 
 <pre><code class="r">plot(cars)
 </code></pre>
 
 <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfgAAAGwCAMAAABy/YdMAAAAbFBMVEX9/v0AAAAAADkAAGUAOTkAOWUAOY8AZrU5AAA5ADk5AGU5OY85j9plAABlADllAGVlOQBlZjlltf2POQCPOTmPOWWPjzmPtY+P2/21ZgC1/rW1/v3ajzna24/a/v39tWX924/9/rX9/tr9/v0hhXJqAAAAJHRSTlP//////////////////////////////////////////////wBYLA0NAAAACXBIWXMAAAsSAAALEgHS3X78AAAJjElEQVR4nO3di3LbuBlA4bW7jd2snLTyXqSNGl38/u9YkVbqRKIVUsRPAjjnm061bSYIN8ckCF2gX16E9MvcB6B5GB7K8FCGhzI8lOGhDA9leCjDQxkeyvBQhocyPJThoQwPZXgow0MZHsrwUIaHMjyU4aEMD2V4KMNDGR7K8FCGhzI8lOGhDA9leCjDQxkeyvBQhocyPJThoQwPZXgow0MZHsrwUIaHMjyU4aEMD2V4KMNDGR7K8FCGhzI8lOGhDA9leCjDQxkeakz4O+UsMPyI36too8PvHtufn398GTq0ZjU2/OF52T5uP3wdOLRmNTb8/vOXHx77D61ZecZDjZ7j90/O8SXyrh7K8FAplnP3K2/uMvPTJ2iS3NwdnheGz8rdy0//+tMs59YP34Xv+aSg4kwQ/rSc2/z60TM+HxOEPy7nFs3D5nI9Z/j5xM/xtw+tWRkeyvBQhocavZx7Oq3dvLkry+gzvnn25qahNavxl/r9p9VNQ2tWzvFQhocyPJThoQwPZXgow0MZHsrwUIaHMjyU4aEMD2V4KMNDGR7K8FCGhzI8lOGhDA9leCjDQxkeyvBQhocyPJThody2HMpNjKHcthzKMx7KbcuhvKuHMjyUyzkob+6gApZzblteAs94KJdzUN7VQxkeyvBQhody23Ioty2HcttyKOd4KMNDGR7K8FCGr5JfMco0xZcK3zy04vR4O4Tha+QZD+UZD+UZT+Vdvd5heCjDQxkeyvBQhocyPJThoQwPZXgow0MZHsrwEOcv2xie4eKFWsNPZOatYQw/kx5vjZj2zzf8NOYO7xw/k9nDnzP8RHLb/s3wUG5pCuUGh1B+QwWUZzyUW5pel9vNeDLe1V+V3fI7mYDwNW1bbvh3HZdzD5tqL/WGf8/h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" alt="plot of chunk unnamed-chunk-2"/> </p>
 
-<p>Some papers on the arXiv are <a name=cite-baezarticle></a><a name=cite-itzhaki></a><a name=cite-wassenberg></a><a href="http://arxiv.org/abs/math/0307200v3">Baez and Lauda [12]</a>; <a href="http://arxiv.org/abs/math/0307200v3">Baez and Lauda [2]</a>; <a href="http://arxiv.org/abs/hep-th/9603067">Itzhaki [13]</a>; <a href="http://arxiv.org/abs/1008.2849v1">Wassenberg and Sanders [14]</a>.</p>
+<p>Some papers on the arXiv are <a id=cite-baezarticle></a><a id=cite-itzhaki></a><a id=cite-wassenberg></a><a href="http://arxiv.org/abs/math/0307200v3">Baez and Lauda [12]</a>; <a href="http://arxiv.org/abs/math/0307200v3">Baez and Lauda [2]</a>; <a href="http://arxiv.org/abs/hep-th/9603067">Itzhaki [13]</a>; <a href="http://arxiv.org/abs/1008.2849v1">Wassenberg and Sanders [14]</a>.</p>
 
 <p><strong>References</strong></p>
 
-<p><a name=bib-herrmann></a><a href="#cite-herrmann">[1]</a> W. A. Herrmann, K.
+<p><a id=bib-herrmann></a><a href="#cite-herrmann">[1]</a> W. A. Herrmann, K.
 Öfele, S. K. Schneider, et al. &ldquo;A carbocyclic carbene as an
 efficient catalyst ligand for C-C coupling reactions&rdquo;. In:
 <em>Angew.~Chem. Int.~Ed.</em> 45.23 (2006), pp. 3859-3862.</p>
 
-<p><a name=bib-baezonline></a><a href="#cite-baezonline">[2]</a> J. C. Baez and
+<p><a id=bib-baezonline></a><a href="#cite-baezonline">[2]</a> J. C. Baez and
 A. D. Lauda. <em>Higher-Dimensional Algebra V: 2-Groups</em>. Oct. 27,
 2004. arXiv:
 <a href="http://arxiv.org/abs/math/0307200v3">math/0307200v3</a>.</p>
 
-<p><a name=bib-kantkpv></a><a href="#cite-kantkpv">[KpV]</a> I. Kant. &ldquo;Kritik
+<p><a id=bib-kantkpv></a><a href="#cite-kantkpv">[KpV]</a> I. Kant. &ldquo;Kritik
 der praktischen Vernunft&rdquo;. In: I. Kant. <em>Kants Werke. Akademie
 Textausgabe</em>. Vol. 5: <em>Kritik der praktischen Vernunft. Kritik der
 Urtheilskraft</em>. Berlin: Walter de Gruyter, 1968, pp. 1-163.</p>
 
-<p><a name=bib-kantku></a><a href="#cite-kantku">[KU]</a> I. Kant. &ldquo;Kritik der
+<p><a id=bib-kantku></a><a href="#cite-kantku">[KU]</a> I. Kant. &ldquo;Kritik der
 Urtheilskraft&rdquo;. In: I. Kant. <em>Kants Werke. Akademie Textausgabe</em>.
 Vol. 5: <em>Kritik der praktischen Vernunft. Kritik der
 Urtheilskraft</em>. Berlin: Walter de Gruyter, 1968, pp. 165-485.</p>
 
-<p><a name=bib-chiu></a><a href="#cite-chiu">[3]</a> W. W. Chiu and W. M. Chow.
+<p><a id=bib-chiu></a><a href="#cite-chiu">[3]</a> W. W. Chiu and W. M. Chow.
 <em>A Hybrid Hierarchical Model of a Multiple Virtual Storage (MVS)
 Operating System</em>. Research rep. RC-6947. IBM, 1978.</p>
 
-<p><a name=bib-padhye></a><a href="#cite-padhye">[4]</a> J. Padhye, V. Firoiu
+<p><a id=bib-padhye></a><a href="#cite-padhye">[4]</a> J. Padhye, V. Firoiu
 and D. Towsley. <em>A Stochastic Model of TCP Reno Congestion
 Avoidance and Control</em>. Tech. rep. 99-02. Amherst, Mass.:
 University of Massachusetts, 1999.</p>
 
-<p><a name=bib-markey></a><a href="#cite-markey">[5]</a> N. Markey. <em>Tame the
+<p><a id=bib-markey></a><a href="#cite-markey">[5]</a> N. Markey. <em>Tame the
 BeaST. The B to X of BibTeX</em>. Oct. 16, 2005. URL:
 <a href="http://tug.ctan.org/tex-archive/info/bibtex/tamethebeast/ttb_en.pdf">http://tug.ctan.org/tex-archive/info/bibtex/tamethebeast/ttb_en.pdf</a>
 (visited on 10/01/2006).</p>
@@ -249,39 +248,39 @@ BeaST. The B to X of BibTeX</em>. Oct. 16, 2005. URL:
 Orkney Earldom of the Twelfth Century. A Musicological Study&rdquo;. PhD
 thesis. Uppsala: Uppsala Universitet, 1985.</p>
 
-<p><a name=bib-ctan></a><a href="#cite-ctan">[7]</a> <em>CTAN. The Comprehensive
+<p><a id=bib-ctan></a><a href="#cite-ctan">[7]</a> <em>CTAN. The Comprehensive
 TeX Archive Network</em>. 2006. URL:
 <a href="http://www.ctan.org">http://www.ctan.org</a> (visited on
 10/01/2006).</p>
 
-<p><a name=bib-aristotleanima></a><a href="#cite-aristotleanima">[8]</a>
+<p><a id=bib-aristotleanima></a><a href="#cite-aristotleanima">[8]</a>
 Aristotle. <em>De Anima</em>. Ed. by R. D. Hicks. Cambridge: Cambridge
 University Press, 1907.</p>
 
-<p><a name=bib-aristotlephysics></a><a href="#cite-aristotlephysics">[9]</a>
+<p><a id=bib-aristotlephysics></a><a href="#cite-aristotlephysics">[9]</a>
 Aristotle. <em>Physics</em>. Trans.  by P. H. Wicksteed and F. M.
 Cornford. New York: G. P. Putnam, 1929.</p>
 
-<p><a name=bib-aristotlepoetics></a><a href="#cite-aristotlepoetics">[10]</a>
+<p><a id=bib-aristotlepoetics></a><a href="#cite-aristotlepoetics">[10]</a>
 Aristotle. <em>Poetics</em>. Ed. by D. W. Lucas. Clarendon Aristotle.
 Oxford: Clarendon Press, 1968.</p>
 
-<p><a name=bib-aristotlerhetoric></a><a href="#cite-aristotlerhetoric">[11]</a>
+<p><a id=bib-aristotlerhetoric></a><a href="#cite-aristotlerhetoric">[11]</a>
 Aristotle. <em>The Rhetoric of Aristotle with a commentary by the
 late Edward Meredith Cope</em>. Ed. by E. M. Cope. With a comment. by
 E. M. Cope. Vol. 3. 3 vols. Cambridge University Press, 1877.</p>
 
-<p><a name=bib-baezarticle></a><a href="#cite-baezarticle">[12]</a> J. C. Baez
+<p><a id=bib-baezarticle></a><a href="#cite-baezarticle">[12]</a> J. C. Baez
 and A. D. Lauda. &ldquo;Higher-Dimensional Algebra V: 2-Groups&rdquo;. Version
 3. In: <em>Theory and Applications of Categories</em> 12 (2004), pp.
 423-491. arXiv:
 <a href="http://arxiv.org/abs/math/0307200v3">math/0307200v3</a>.</p>
 
-<p><a name=bib-itzhaki></a><a href="#cite-itzhaki">[13]</a> N. Itzhaki. <em>Some
+<p><a id=bib-itzhaki></a><a href="#cite-itzhaki">[13]</a> N. Itzhaki. <em>Some
 remarks on &#39;t Hooft&#39;s S-matrix for black holes</em>. Mar. 11, 1996.
 arXiv: <a href="http://arxiv.org/abs/hep-th/9603067">hep-th/9603067</a>.</p>
 
-<p><a name=bib-wassenberg></a><a href="#cite-wassenberg">[14]</a> J. Wassenberg
+<p><a id=bib-wassenberg></a><a href="#cite-wassenberg">[14]</a> J. Wassenberg
 and P. Sanders. <em>Faster Radix Sort via Virtual Memory and
 Write-Combining</em>. Aug. 17, 2010. arXiv: <a href="http://arxiv.org/abs/1008.2849v1">1008.2849v1
 [cs.DS]</a>.</p>
